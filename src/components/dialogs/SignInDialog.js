@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Typography, Button, TextField, FormControl,
   DialogContentText, DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
-// import { URLS } from "../../utils";
+import {SAVE_AUTH_DATA} from "../constants";
 
 const styles = theme => ({
   title: {
@@ -47,13 +47,15 @@ class SignInDialog extends Component {
   _onSubmit(){
     let self = this
     const { email, password } = this.state;
+    const { syncAction } = this.props;
     $.ajax({
-      url: api + "customer/login",
+      url: api + "customers/login",
       data: {email: email, password: password},
       type: "POST",
       success: function(resp) {
-        console.log('resp',resp)
-        self.props.onCancel()},
+        sessionStorage.setItem('token', resp.accessToken);
+        syncAction(SAVE_AUTH_DATA,resp)
+        },
       error: function(error) { console.log(error); }
     });
   }
@@ -68,7 +70,7 @@ class SignInDialog extends Component {
         <DialogContent >
           <DialogContentText children={ '*All fields are required!' }
                              className={classes.centerAlign}/>
-          <form onSubmit={onCancel}>
+          <form>
             <FormControl fullWidth>
               <TextField label={'Email*'} value={email}
                          onChange={(event) => {
@@ -105,8 +107,8 @@ class SignInDialog extends Component {
 SignInDialog.propTypes = {
   open: PropTypes.bool,
   onCancel: PropTypes.func,
+  syncAction: PropTypes.func,
   openRegister: PropTypes.func,
-
 };
 
 export default withStyles(styles)(SignInDialog) ;
