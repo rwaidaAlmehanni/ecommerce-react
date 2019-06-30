@@ -1,0 +1,11 @@
+
+.header {
+    padding: 5% 1% 5% 1%;
+    background-color: #f1f1f1;
+    display: flex;
+    width: 100%;
+
+}
+.fb-Logo {
+  background-image: url(./src/static/images/icons-facebook-black.png);
+}
