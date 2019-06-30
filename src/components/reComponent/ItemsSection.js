@@ -10,7 +10,7 @@ const styles = theme => ({
   root: {
     display:'flex',
     backgroundColor:'#f7f7f7',
-    width: '100%',
+    width: '98%',
     margin:'0 auto',
     padding:'1em'
   },
@@ -72,7 +72,7 @@ class ItemsSection extends Component {
         </div>
         {products.rows === undefined ? null :
           <Grid container className={classes.productsDiv}>
-            <Grid lg={12} style={{display:'flex'}}>
+            <Grid lg={12} style={{display:'flex',minWidth:'100%',maxWidth:'100%'}}>
               {[...Array(pages).keys()].map((p,i) => {
                 return (<Typography variant={'h5'} onClick={()=>{
                   this.setState({ page: p+1 })
@@ -80,7 +80,6 @@ class ItemsSection extends Component {
                                     style={{ margin:'0.5em', color: page === (p+1) ? '#f62f5e':'#2e2e2e' }}>{ p+1 }</Typography>)
               })}
             </Grid>
-
             {products.rows.map((p) => {
               return (<Grid lg={2} className={classes.itemDiv} onClick={()=>{onChooseProduct(p)}}><ItemCard product={p}/></Grid>)
             })}
