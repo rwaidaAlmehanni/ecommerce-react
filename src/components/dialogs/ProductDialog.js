@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Typography, Button, TextField, FormControl,
-  DialogContentText, DialogContent,
-  DialogTitle, Dialog, withStyles} from "@material-ui/core";
+  DialogContent, DialogTitle, Dialog, withStyles} from "@material-ui/core";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorder from "@material-ui/icons/StarBorder";
 import {SAVE_CART, SAVE_CART_ITEMS} from "../constants";
@@ -78,14 +77,16 @@ const styles = theme => ({
     position:'absolute',
     float: 'left',
     left:'15px',
+    color:'#f62f5e',
     textDecorationLine: 'line-through',
     textDecorationColor: '#f62f5e'
   },
-  priceDivRight:{
+  priceDivRight: {
     backgroundColor: '#f62f5e',
     color: '#fff',
     position:'absolute',
-    right:'15px',
+    right:'50px',
+    padding:'0.2em',
     float: 'right',
   },
   reviewDiv:{
@@ -156,7 +157,7 @@ class ProductDialog extends Component {
   _AddItemToCart(cart){
     let self = this;
     const { productDetails, syncAction } = this.props;
-     const { color, size } = this.state;
+    const { color, size } = this.state;
     $.ajax({
       url: api + "shoppingcart/add",
       data: {cart_id: cart.cart_id, product_id: productDetails[0].product_id, attributes: color + "," + size},
@@ -295,7 +296,9 @@ class ProductDialog extends Component {
             </div>
             <div className={classes.buttonDiv}>
               <Button children={<b>leave review</b>} variant={"contained"} className={classes.button}
-                      type="submit" onClick={()=>{addReview({product_id:productDetails[0].product_id,review:review,rating:this._getRating()})}}
+                      type="submit" onClick={()=>{addReview({ product_id: productDetails[0].product_id,
+                review:review,
+                rating:this._getRating()})}}
               />
             </div>
           </form>
