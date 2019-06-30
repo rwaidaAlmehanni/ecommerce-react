@@ -71,7 +71,7 @@ class SubHeader extends Component {
   };
 
   render() {
-    const { classes, departments, onChooseDepartment } = this.props;
+    const { classes, departments, onChooseDepartment, searchProduct } = this.props;
     const { clickedDepartment } = this.state;
     return (
       <div className={classes.root}>
@@ -93,8 +93,9 @@ class SubHeader extends Component {
             <TextField  fullWidth
                         style={{textDecoration: 'none'}}
                         placeholder="Search anything"
-                        onChange={(event) =>{console.log('ddsd',event)}}/>
-          </FormControl></div>
+                        onChange={(event) =>{searchProduct(event.target.value)}}/>
+          </FormControl>
+        </div>
         <div style={{padding:'1em'}}><SearchIcon style={{fill:'#fff'}}/></div>
       </div>
     );
@@ -102,6 +103,7 @@ class SubHeader extends Component {
 }
 SubHeader.propTypes = {
   departments: PropTypes.array,
+  searchProduct: PropTypes.func,
   onChooseDepartment: PropTypes.func,
 
 }
