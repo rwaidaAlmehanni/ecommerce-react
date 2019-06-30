@@ -9,6 +9,9 @@ const styles = theme => ({
     width: '100%',
     margin:'0 auto'
   },
+  fbDiv:{
+    backgroundImage: 'url(../../static/images/icons-facebook-black.png)',
+  },
   flexDiv: {
     margin:0,
     width: '100%',
@@ -16,10 +19,12 @@ const styles = theme => ({
     paddingBottom:'1em'
   },
   spanColor: {
-    color:"f62f5e"
+    color:'f62f5e',
+    cursor: 'pointer'
   },
   defaultColor:{
-    color: '#fff'
+    color: '#fff',
+    cursor: 'pointer'
   },
   partDiv: {
     width: '20%',
@@ -45,32 +50,54 @@ const styles = theme => ({
 
 });
 
+
 class Footer extends Component {
   constructor() {
     super();
     this.state = {
       title: '',
       definition: '',
-      isSubmitted: false
+      isSubmitted: false,
+      clickedDepartment: false
     };
   }
   render() {
-    const { classes, departments } = this.props;
+    const { classes, departments, onChooseDepartment } = this.props;
+    const { clickedDepartment } = this.state;
     return (
       <div className={classes.root}>
         {departments !== undefined ?
           <div className={classes.ulDiv}>
             <div className={classes.sideDiv}/>
-            <div>
-              <ul className={classes.ulDiv}>
-                {departments.map((d,i)=>{
-                  return ( <ol className={classes.defaultColor} style={{textAlign:'center'}}><Typography variant={'h6'}><b>{d.name}</b></Typography></ol>)})}
-              </ul>
+            <div >
+              {departments !== undefined?
+                <ul className={classes.ulDiv}>
+                  {departments.map((d,i)=>{
+                    return (<ol className={!clickedDepartment || clickedDepartment !== d? classes.defaultColor : classes.spanColor}
+                                onClick={()=>{ this.setState({clickedDepartment:d})
+                                  onChooseDepartment(d)}}>
+                      <Typography variant={'h6'}><b>{d.name}</b></Typography>
+                    </ol>)
+                  })}
+                </ul>
+                :null}
             </div>
             <div className={classes.sideDiv}/>
           </div>
           :null}
-        <div>
+        <div className={classes.flexDiv}>
+          <div className={classes.partDiv}>
+            <div className={classes.fbDiv}/>
+          </div>
+          {/*<div className={classes.partDiv}>*/}
+          {/*<img src={require(pinterest)}/>*/}
+          {/*</div>*/}
+          {/*<div className={classes.partDiv}>*/}
+          {/*<img src={require(twitter)}/>*/}
+          {/*</div>*/}
+          {/*<div className={classes.partDiv}>*/}
+          {/*<img src={require(facebook)}/>*/}
+          {/*</div>*/}
         </div>
         <div className={classes.flexDiv}>
           <div className={classes.partDiv}/>
