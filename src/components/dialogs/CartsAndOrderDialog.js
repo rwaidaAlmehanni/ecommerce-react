@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Typography, Button, TextField, FormControl,
-  DialogContentText, DialogContent,
+import {Typography, Button, TextField,
+  DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
-import CartTable from "./reComponent/CartTable";
-import ShippingAddress from "./reComponent/ShippingAddress";
+import CartTable from "../reComponent/CartTable";
+import ShippingAddress from "../reComponent/ShippingAddress";
 import {CLEAR_CART} from "../constants";
-// import { URLS } from "../../utils";
 
 const styles = theme => ({
   root: {
