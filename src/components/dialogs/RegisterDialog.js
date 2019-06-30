@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Typography, Button, TextField, FormControl,
   DialogContentText, DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
+import {SAVE_AUTH_DATA} from "../constants";
 // import { URLS } from "../../utils";
 
 const styles = theme => ({
@@ -57,12 +58,15 @@ class RegisterDialog extends Component {
   _onSubmit(){
     let self = this
     const { email, password, name } = this.state;
+    const { syncAction, onCancel } = this.props;
     $.ajax({
       url: api + "customers",
       data: {name: name, email: email, password: password, },
       type: "POST",
       success: function(resp) {
-        console.log('resp',resp)
+        sessionStorage.setItem('token', resp.accessToken);
+        syncAction(SAVE_AUTH_DATA,resp)
+        onCancel()
       },
       error: function(error) { console.log('errorrrrrrrr',error); }
     });
@@ -134,6 +138,7 @@ RegisterDialog.propTypes = {
   open: PropTypes.bool,
   onCancel: PropTypes.func,
   openSignIn: PropTypes.func,
+  syncAction: PropTypes.func,
 
 };
 
