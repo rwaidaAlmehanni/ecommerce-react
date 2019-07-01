@@ -8,6 +8,7 @@ import TableCell from "@material-ui/core/TableCell/TableCell";
 import TableHead from "@material-ui/core/TableHead/TableHead";
 import CloseIcon from "@material-ui/icons/Close";
 import AddIcon from "@material-ui/icons/Add";
+import $ from "jquery";
 
 const styles = theme => ({
   root: {

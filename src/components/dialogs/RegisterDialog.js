@@ -4,7 +4,7 @@ import {Typography, Button, TextField, FormControl,
   DialogContentText, DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
 import {SAVE_AUTH_DATA} from "../constants";
-// import { URLS } from "../../utils";
+import $ from "jquery";
 
 const styles = theme => ({
   title: {

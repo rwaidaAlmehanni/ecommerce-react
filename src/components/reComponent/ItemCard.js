@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/Typography/Typography";
 import Card from "@material-ui/core/Card/Card";
 import CardContent from "@material-ui/core/CardContent/CardContent";
+import $ from "jquery";
 // import SearchIcon from "@material-ui/icons/SearchIcon";
 
 const styles = theme => ({

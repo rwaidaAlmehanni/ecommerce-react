@@ -12,6 +12,7 @@ import {CLEAR_AUTH_DATA} from "../constants";
 import FormControl from "@material-ui/core/FormControl/FormControl";
 import InputLabel from "@material-ui/core/InputLabel/InputLabel";
 import ProfileDialog from "../dialogs/ProfileDialog";
+import $ from "jquery";
 
 const styles = theme => ({
   root: {

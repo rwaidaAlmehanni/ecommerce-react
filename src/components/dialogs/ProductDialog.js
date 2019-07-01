@@ -5,6 +5,7 @@ import {Typography, Button, TextField, FormControl,
 import StarIcon from "@material-ui/icons/Star";
 import StarBorder from "@material-ui/icons/StarBorder";
 import {SAVE_CART, SAVE_CART_ITEMS} from "../constants";
+import $ from "jquery";
 
 const styles = theme => ({
   title: {

@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Typography, Button, TextField, FormControl,
-  DialogContentText, DialogContent,
+import {Typography, FormControl, DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
-import {SAVE_AUTH_DATA} from "../constants";
-// import { URLS } from "../../utils";
 
 const styles = theme => ({
   dialogTitle: {

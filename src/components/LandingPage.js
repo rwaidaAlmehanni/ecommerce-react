@@ -6,6 +6,8 @@ import ItemsSection from "./reComponent/ItemsSection";
 import ProductDialog from "./dialogs/ProductDialog";
 import { connect } from 'react-redux';
 import {syncAction} from "./actions";
+import $ from "jquery";
+
 
 const api = "https://backendapi.turing.com/";
 

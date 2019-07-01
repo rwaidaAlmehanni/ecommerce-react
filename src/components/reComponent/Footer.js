@@ -89,15 +89,6 @@ class Footer extends Component {
           <div className={classes.partDiv}>
             <div className={classes.fbDiv}/>
           </div>
-          {/*<div className={classes.partDiv}>*/}
-          {/*<img src={require(pinterest)}/>*/}
-          {/*</div>*/}
-          {/*<div className={classes.partDiv}>*/}
-          {/*<img src={require(twitter)}/>*/}
-          {/*</div>*/}
-          {/*<div className={classes.partDiv}>*/}
-          {/*<img src={require(facebook)}/>*/}
-          {/*</div>*/}
         </div>
         <div className={classes.flexDiv}>
           <div className={classes.partDiv}/>
