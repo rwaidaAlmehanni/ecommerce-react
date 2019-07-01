@@ -5,6 +5,7 @@ import {Typography, Button, TextField, FormControl,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
 import {SAVE_AUTH_DATA} from "../constants";
 import $ from "jquery";
+import CloseIcon from "@material-ui/icons/Close";
 
 const styles = theme => ({
   title: {
@@ -40,6 +41,14 @@ const styles = theme => ({
     width: '50%',
     paddingRight: '0.5em'
   },
+  closeIcon: {
+    float:'right',
+    right:'15px',
+    top:'5px',
+    marginBottom:'1em',
+    position:'absolute',
+    cursor:'pointer'
+  }
 
 });
 const api = "https://backendapi.turing.com/";
@@ -77,6 +86,7 @@ class RegisterDialog extends Component {
     const { email, password, name, confirmPassword } = this.state;
     return (
       <Dialog open={open} onClose={onCancel} maxWidth={'xs'}>
+        <div className={classes.closeIcon} onClick={onCancel}><CloseIcon/></div>
         <DialogTitle children={<Typography variant={'h4'}><b className={classes.title}>{"Register"}</b></Typography>}
                      className={classes.centerAlign}/>
         <DialogContent >

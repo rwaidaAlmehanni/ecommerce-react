@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Typography, FormControl, DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 
 const styles = theme => ({
   dialogTitle: {
@@ -11,6 +12,14 @@ const styles = theme => ({
     color: '#f62f5e',
     paddingTop: '1em'
   },
+  closeIcon: {
+    float:'right',
+    right:'15px',
+    top:'5px',
+    marginBottom:'1em',
+    position:'absolute',
+    cursor:'pointer'
+  }
 });
 const api = "https://backendapi.turing.com/";
 
@@ -25,6 +34,7 @@ class ProfileDialog extends Component {
     const { classes, onCancel, open, userProfile } = this.props;
     return (
       <Dialog open={open} onClose={onCancel} maxWidth={'sm'}>
+        <div className={classes.closeIcon} onClick={onCancel}><CloseIcon/></div>
         <DialogTitle children={<Typography variant={'h5'} className={classes.dialogTitle}><b>{"Simple Profile"}</b></Typography>}
                      className={classes.centerAlign}/>
         <DialogContent >

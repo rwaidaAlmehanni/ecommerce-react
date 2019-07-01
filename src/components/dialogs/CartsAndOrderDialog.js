@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Typography, Button, TextField,
   DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 import CartTable from "../reComponent/CartTable";
 import ShippingAddress from "../reComponent/ShippingAddress";
 import {CLEAR_CART} from "../constants";
@@ -10,7 +11,8 @@ import {CLEAR_CART} from "../constants";
 const styles = theme => ({
   root: {
     padding: '3em',
-    margin: '1em'
+    margin: '1em',
+    position:'relative',
   },
   centerAlign: {
     textAlign: 'center'
@@ -32,6 +34,14 @@ const styles = theme => ({
     color: '#f62f5e',
     width: '60%',
     textAlign:'center'
+  },
+  closeIcon: {
+    float:'right',
+    right:'15px',
+    top:'5px',
+    marginBottom:'1em',
+    position:'absolute',
+    cursor:'pointer'
   }
 
 });
@@ -80,6 +90,7 @@ class CartsAndOrderDialog extends Component {
     const { orderPlace, doOrder } = this.state;
     return (
       <Dialog open={open} onClose={onCancel} maxWidth={'xl'} className={classes.root}>
+        <div className={classes.closeIcon} onClick={onCancel}><CloseIcon/></div>
         { !orderPlace ? null:
           <DialogTitle children={<Typography variant={'h4'}><b className={classes.title}>{"Shipping Address"}</b></Typography>}
                        className={classes.centerAlign}/>

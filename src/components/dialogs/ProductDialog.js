@@ -4,6 +4,7 @@ import {Typography, Button, TextField, FormControl,
   DialogContent, DialogTitle, Dialog, withStyles} from "@material-ui/core";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorder from "@material-ui/icons/StarBorder";
+import CloseIcon from "@material-ui/icons/Close";
 import {SAVE_CART, SAVE_CART_ITEMS} from "../constants";
 import $ from "jquery";
 
@@ -97,6 +98,14 @@ const styles = theme => ({
     border: '0.5px solid #2e2e2e',
     padding: '0.5em'
   },
+  closeIcon: {
+    float:'right',
+    right:'15px',
+    top:'5px',
+    marginBottom:'1em',
+    position:'absolute',
+    cursor:'pointer'
+  }
 
 });
 const api = "https://backendapi.turing.com/";
@@ -204,6 +213,7 @@ class ProductDialog extends Component {
     }
     return (
       <Dialog open={open} onClose={onClose} maxWidth={'md'}>
+        <div className={classes.closeIcon} onClick={onClose}><CloseIcon/></div>
         <DialogTitle children={<Typography variant={'h4'}><b className={classes.title}>{productDetails[0].name}</b></Typography>}
                      className={classes.centerAlign}/>
         <DialogContent >

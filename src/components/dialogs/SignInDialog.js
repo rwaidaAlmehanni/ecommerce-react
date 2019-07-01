@@ -4,6 +4,7 @@ import {Typography, Button, TextField, FormControl,
   DialogContentText, DialogContent,
   DialogTitle, Dialog, withStyles} from "@material-ui/core";
 import {SAVE_AUTH_DATA} from "../constants";
+import CloseIcon from "@material-ui/icons/Close";
 import $ from "jquery";
 
 const styles = theme => ({
@@ -31,6 +32,14 @@ const styles = theme => ({
     color: '#6eb2fb',
     paddingLeft: '0.5em',
     cursor: 'pointer'
+  },
+  closeIcon: {
+    float:'right',
+    right:'15px',
+    top:'5px',
+    marginBottom:'1em',
+    position:'absolute',
+    cursor:'pointer',
   }
 
 });
@@ -56,7 +65,7 @@ class SignInDialog extends Component {
       success: function(resp) {
         sessionStorage.setItem('token', resp.accessToken);
         syncAction(SAVE_AUTH_DATA,resp)
-        },
+      },
       error: function(error) { console.log(error); }
     });
   }
@@ -66,6 +75,7 @@ class SignInDialog extends Component {
     const {email, password} = this.state;
     return (
       <Dialog open={open} onClose={onCancel} maxWidth={'xs'}>
+        <div className={classes.closeIcon} onClick={onCancel}><CloseIcon/></div>
         <DialogTitle children={<Typography variant={'h4'}><b className={classes.title}>{"Sign In"}</b></Typography>}
                      className={classes.centerAlign}/>
         <DialogContent >
