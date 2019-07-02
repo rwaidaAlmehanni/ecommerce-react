@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="804d858c-662d-4015-bbaf-267e261f9e85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/CartsAndOrderDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/CartsAndOrderDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/ProductDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/ProductDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/ProfileDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/ProfileDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/RegisterDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/RegisterDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dialogs/SignInDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/SignInDialog.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +15,7 @@
     <session id="-302092427">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.184" value="1" />
@@ -27,8 +23,9 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,7 +52,7 @@
         <counts>
           <entry key="css" value="15" />
           <entry key="html" value="2" />
-          <entry key="js" value="4568" />
+          <entry key="js" value="4689" />
           <entry key="md" value="313" />
         </counts>
       </usages-collector>
@@ -63,7 +60,7 @@
         <counts>
           <entry key="CSS" value="15" />
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="4568" />
+          <entry key="JavaScript" value="4689" />
           <entry key="Markdown" value="313" />
         </counts>
       </usages-collector>
@@ -131,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/dialogs/ProductDialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="3726">
               <caret line="215" column="8" selection-start-line="215" selection-start-column="8" selection-end-line="215" selection-end-column="79" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -155,8 +152,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/dialogs/SignInDialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="460">
+              <caret line="99" column="98" selection-start-line="99" selection-start-column="98" selection-end-line="99" selection-end-column="98" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -167,8 +164,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/dialogs/CartsAndOrderDialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="44" column="3" lean-forward="true" selection-start-line="37" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
+            <state relative-caret-position="648">
+              <caret line="44" column="3" selection-start-line="37" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -179,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/dialogs/RegisterDialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="88" column="80" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="80" />
+            <state relative-caret-position="1458">
+              <caret line="88" column="80" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="80" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -303,7 +300,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,11 +334,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lms-web" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -383,10 +380,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2763958" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27971256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -401,7 +398,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="GraphQL" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.22384937" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.08368201" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -594,6 +591,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dialogs/ProfileDialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dialogs/ProductDialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3726">
+          <caret line="215" column="8" selection-start-line="215" selection-start-column="8" selection-end-line="215" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/reComponent/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -606,35 +620,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dialogs/CartsAndOrderDialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="44" column="3" lean-forward="true" selection-start-line="37" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
+        <state relative-caret-position="648">
+          <caret line="44" column="3" selection-start-line="37" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dialogs/ProductDialog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="215" column="8" selection-start-line="215" selection-start-column="8" selection-end-line="215" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dialogs/ProfileDialog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dialogs/RegisterDialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="88" column="80" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="80" />
+        <state relative-caret-position="1458">
+          <caret line="88" column="80" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="80" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -643,8 +640,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dialogs/SignInDialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="460">
+          <caret line="99" column="98" selection-start-line="99" selection-start-column="98" selection-end-line="99" selection-end-column="98" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

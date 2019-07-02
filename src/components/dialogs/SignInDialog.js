@@ -6,6 +6,7 @@ import {Typography, Button, TextField, FormControl,
 import {SAVE_AUTH_DATA} from "../constants";
 import CloseIcon from "@material-ui/icons/Close";
 import $ from "jquery";
+import FormHelperText from "@material-ui/core/FormHelperText/FormHelperText";
 
 const styles = theme => ({
   title: {
@@ -50,7 +51,8 @@ class SignInDialog extends Component {
     super();
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      error: false
     }
     this._onSubmit = this._onSubmit.bind(this)
   }
@@ -66,13 +68,13 @@ class SignInDialog extends Component {
         sessionStorage.setItem('token', resp.accessToken);
         syncAction(SAVE_AUTH_DATA,resp)
       },
-      error: function(error) { console.log(error); }
+      error: function(error) { this.setState({error: true}) }
     });
   }
 
   render() {
     const { classes, onCancel, open, openRegister } = this.props;
-    const {email, password} = this.state;
+    const {email, password, error} = this.state;
     return (
       <Dialog open={open} onClose={onCancel} maxWidth={'xs'}>
         <div className={classes.closeIcon} onClick={onCancel}><CloseIcon/></div>
@@ -82,7 +84,7 @@ class SignInDialog extends Component {
           <DialogContentText children={ '*All fields are required!' }
                              className={classes.centerAlign}/>
           <form>
-            <FormControl fullWidth>
+            <FormControl fullWidth error={error}>
               <TextField label={'Email*'} value={email}
                          onChange={(event) => {
                            this.setState({email: event.target.value})
@@ -95,6 +97,7 @@ class SignInDialog extends Component {
                            this.setState({password: event.target.value})
                          }}
               />
+              <FormHelperText id="component-error-text">{"error in entered data"}</FormHelperText>
             </FormControl>
             <div className={classes.buttonDiv}>
               <Button children={<b>Submit</b>} variant={"contained"} className={classes.button}
